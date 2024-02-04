@@ -3,17 +3,29 @@ import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('articles')
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
+  const articles = await getCollection('articles')
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
   }))
 }
 
-const { post } = Astro.props
-const { Content } = await post.render()
+const { article } = Astro.props
+const { Content } = await article.render()
 ---
 
-<Layout frontmatter={post.data} title={post.data.title}>
+<Layout frontmatter={article.data} title={article.data.title}>
+  <div class='my-4 space-x-2'>
+    {
+      article.data.tags.map(tag => (
+        <a
+          href={`/tag/${tag}`}
+          class='border border-white py-1 px-2 rounded-lg'>
+          {tag}
+        </a>
+      ))
+    }
+  </div>
+
   <Content />
 </Layout>

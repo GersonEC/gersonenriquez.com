@@ -1,7 +1,16 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro';
+
 let articles = await getCollection('articles')
+
+const tags: string[] = []
+articles.map(article => {
+	article.data.tags.map(tag => {
+    if (!tags.includes(tag)) tags.push(tag)
+  })
+})
+
 articles = articles
   .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
 ---
@@ -21,5 +30,17 @@ articles = articles
 			}
 		</ul>
 		<p class='py-4'><a class='underline' href={'/blog/page/1'}>See all posts ▶︎</a></p>
+		<p class='my-4'>Explore by tag:</p>
+		<div class='my-4 space-x-2'>
+			{
+			tags.map(tag => (
+				<a
+					href={`/tag/${tag}`}
+					class='border border-white py-1 px-2 rounded-lg'>
+					{tag}
+				</a>
+			))
+			}
+		</div>
 	</main>
 </Layout>
