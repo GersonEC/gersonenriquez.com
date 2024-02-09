@@ -11,6 +11,17 @@ const articlesCollection = defineCollection({
   }),
 })
 
+const bookNotesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    tags: z.array(z.string()),
+
+  }),
+})
+
 export const collections = {
   articles: articlesCollection,
+  bookNotes: bookNotesCollection,
 }
