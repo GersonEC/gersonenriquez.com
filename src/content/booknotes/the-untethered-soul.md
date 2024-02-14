@@ -1,11 +1,6 @@
 ---
 title: 'The Untethered Soul'
-pubDate: 2024-02-08
-description: 'Book notes about the untethered soul book by Michael Singer'
-author: 'Gerson Enriquez'
-image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'The Untethered soul'
+date: 2024-02-08
 tags: ["book-notes", "self-awareness"]
 ---
 

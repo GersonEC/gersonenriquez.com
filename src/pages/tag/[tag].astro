@@ -35,7 +35,7 @@ const { articles } = Astro.props
     {
       articles.map(article => (
         <li>
-          <a class='underline' href={`/blog/${article.slug}`}>
+          <a class='underline' href={`/articles/${article.slug}`}>
             {article.data.title}
           </a>
           <span>({article.data.date.toLocaleDateString()})</span>

@@ -17,7 +17,7 @@ const { Content } = await article.render()
 <Layout frontmatter={article.data} title={article.data.title}>
   <div class='my-4 space-x-2'>
     {
-      article.data.tags.map(tag => (
+      article.data.tags.map((tag: any) => (
         <a
           href={`/tag/${tag}`}
           class='border border-white py-1 px-2 rounded-lg'>

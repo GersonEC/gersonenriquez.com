@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro';
-import Header from '@components/Header.astro';
 
 let articles = await getCollection('articles')
 
@@ -24,13 +23,13 @@ articles = articles
 			{
 				articles.map((article) => (
 					<li>
-						<a class="underline" href={`/blog/${article.slug}`}>{article.data.title}</a>
+						<a class="underline" href={`/articles/${article.slug}`}>{article.data.title}</a>
 						<span>({article.data.date.toLocaleDateString()})</span>
 					</li>
 				))
 			}
 		</ul>
-		<p class='py-4'><a class='underline' href={'/blog/page/1'}>See all posts ▶︎</a></p>
+		<p class='py-4'><a class='underline' href={'/articles/page/1'}>See all articles ▶︎</a></p>
 		<p class='my-4'>Explore by tag:</p>
 		<div class='my-4 space-x-2'>
 			{
@@ -44,7 +43,7 @@ articles = articles
 			}
 		</div>
 		<ul>
-			<li><a href="/books/the-untethered-soul/">The Untethered sould book note</a></li>
+			<li><a href="/booknotes/the-untethered-soul/">The Untethered sould book note</a></li>
 		</ul>
 	</main>
 </Layout>

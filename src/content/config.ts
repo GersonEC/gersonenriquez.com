@@ -23,5 +23,5 @@ const bookNotesCollection = defineCollection({
 
 export const collections = {
   articles: articlesCollection,
-  bookNotes: bookNotesCollection,
+  booknotes: bookNotesCollection,
 }
