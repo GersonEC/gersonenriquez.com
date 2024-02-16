@@ -2,7 +2,6 @@
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
-import '@styles/global.css';
 
 const { frontmatter, title } = Astro.props
 ---
@@ -29,7 +28,12 @@ const { frontmatter, title } = Astro.props
 		/>
 		<ViewTransitions />
 	</head>
-	<body class="p-5">
+	<body class="bg-white dark:bg-darkblue">
+		<h1>{frontmatter?.title && <h1>{frontmatter.title}</h1>}</h1>
+		<h1 class="dark:text-white">CIAO</h1>
+		<ul>
+			<Header />
+		</ul>
 		{
 			Astro.url.pathname !== '/' && (
 			  <p class='py-4'>
@@ -39,10 +43,6 @@ const { frontmatter, title } = Astro.props
 			  </p>
 			)
 		}
-		<h1>{frontmatter?.title && <h1>{frontmatter.title}</h1>}</h1>
-		<ul>
-			<Header />
-		</ul>
 		<slot />
 		<Footer />
 	</body>
