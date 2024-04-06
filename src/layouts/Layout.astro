@@ -29,12 +29,10 @@ const { frontmatter, title } = Astro.props
 		/>
 		<ViewTransitions />
 	</head>
-	<body class="bg-white dark:bg-darkblue">
-		<h1>{frontmatter?.title && <h1>{frontmatter.title}</h1>}</h1>
-		<h1 class="dark:text-white">CIAO</h1>
-		<ul>
-			<Header />
-		</ul>
+	<!-- <body class="bg-darkblue text-gray-light"> -->
+	<body>
+		<!-- <h1>{frontmatter?.title && <h1>{frontmatter.title}</h1>}</h1> -->
+		<Header />
 		{
 			Astro.url.pathname !== '/' && (
 			  <p class='py-4'>

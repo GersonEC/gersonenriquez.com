@@ -7,6 +7,32 @@
   box-sizing: border-box;
 }
 
+html{
+  background-color: #13151a;
+  color: rgb(232, 232, 232);
+  height: 100vh;
+  width: 100vw;
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+header {
+  border: solid green;
+  height: 5vh;
+}
+
+main {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  border: solid yellow;
+}
+
 @layer components {
   .btn-primary {
     @apply text-black py-2 px-5 bg-primary-dark font-semibold rounded-full shadow-md hover:bg-opacity-90 focus:outline-none focus:ring focus:ring-orange  focus:ring-opacity-75;
@@ -40,12 +66,7 @@ html.light {
   color: #fff;
 }
 
-h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: gray;
-  margin: 1rem 0;
-}
+
 p, li {
   color: white;
 }
@@ -55,9 +76,3 @@ a {
 span {
   color: green
 }*/
-body {
-  width: 100vw;
-  height: 100vh;
-  padding: 1.5rem;
-  line-height: 1.5;
-}
