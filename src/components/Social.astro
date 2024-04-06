@@ -2,13 +2,4 @@
 import '@styles/global.css';
 const { platform, username } = Astro.props;
 ---
-<a class="btn-primary" href={`https://www.${platform}.com/${platform === 'linkedin' ? `/in/${username}`: username}`} target="_blank">{platform}</a>
-
-<!-- <style>
-  a {
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
-  }
-</style> -->
+<a class="btn-primary mr-4" href={`https://www.${platform}.com/${platform === 'linkedin' ? `/in/${username}`: username}`} target="_blank">{platform}</a>
