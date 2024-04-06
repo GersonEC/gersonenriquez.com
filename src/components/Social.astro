@@ -1,5 +1,9 @@
 ---
-import '@styles/global.css';
 const { platform, username } = Astro.props;
 ---
-<a class="btn-primary mr-4" href={`https://www.${platform}.com/${platform === 'linkedin' ? `/in/${username}`: username}`} target="_blank">{platform}</a>
+<a 
+    class="color mr-8"
+    href={`https://www.${platform}.com/${platform === 'linkedin' ? `/in/${username}`: username}`}
+    target="_blank">
+    <img src={`${platform}.svg`} alt={`${platform} icon`} title={`${platform}`}/>
+</a>

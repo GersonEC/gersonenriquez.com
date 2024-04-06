@@ -8,6 +8,11 @@ export default {
 				light: '#9ca3af',
 				dark: '#374151',
 			},
+			blue: {
+				DEFAULT: '#3b82f6',
+				light: '#60a5fa',
+				dark: '#1e3a8a',
+			},
 			'white': 'white',
 			'darkblue': '#13151a',
 			'primary-dark': '#deb887',
