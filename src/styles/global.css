@@ -32,12 +32,8 @@ main {
   align-items: center;
   flex-direction: column;
 }
-.social{
-  display: flex;
-}
 
 footer {
-  border-top: 1px solid white;
   height: 10vh;
   display: flex;
   align-items: center;
