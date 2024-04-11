@@ -5,5 +5,5 @@ const { platform, username } = Astro.props;
     class="color mr-8"
     href={`https://www.${platform}.com/${platform === 'linkedin' ? `/in/${username}`: username}`}
     target="_blank">
-    <img src={`${platform}.svg`} alt={`${platform} icon`} title={`${platform}`}/>
+    <img src={`/${platform}.svg`} alt={`${platform} icon`} title={`${platform}`}/>
 </a>
