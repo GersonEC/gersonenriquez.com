@@ -26,11 +26,8 @@ nav {
 }
 
 main {
-  display: flex;
   height: 80vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 8px 0;
 }
 
 footer {

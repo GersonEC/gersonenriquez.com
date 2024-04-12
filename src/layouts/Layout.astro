@@ -29,11 +29,11 @@ const { frontmatter, title } = Astro.props
 		/>
 		<ViewTransitions />
 	</head>
-	<!-- <body class="bg-darkblue text-gray-light"> -->
 	<body>
-		<!-- <h1>{frontmatter?.title && <h1>{frontmatter.title}</h1>}</h1> -->
 		<Header />
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>
