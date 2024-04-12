@@ -33,15 +33,6 @@ const { frontmatter, title } = Astro.props
 	<body>
 		<!-- <h1>{frontmatter?.title && <h1>{frontmatter.title}</h1>}</h1> -->
 		<Header />
-		{
-			Astro.url.pathname !== '/' && (
-			  <p class='py-4'>
-				<a class='underline' href={'/'}>
-				  ◀︎ Back to the homepage
-				</a>
-			  </p>
-			)
-		}
 		<slot />
 		<Footer />
 	</body>
