@@ -13,6 +13,11 @@ export default {
 				light: '#60a5fa',
 				dark: '#1e3a8a',
 			},
+			yellow: {
+				DEFAULT: '#facc15',
+				light: '#fef08a',
+				dark: '#eab308',
+			},
 		},
 		extend: {},
 	},
