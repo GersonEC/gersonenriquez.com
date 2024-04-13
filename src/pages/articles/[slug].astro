@@ -15,6 +15,7 @@ const { Content } = await article.render()
 ---
 
 <Layout frontmatter={article.data} title={article.data.title}>
+  <p>tags</p>
   <div class='my-4 space-x-2'>
     {
       article.data.tags.map((tag: any) => (

@@ -17,8 +17,7 @@ articles = articles
 
 <Layout title="Homepage">
 	<main>
-		<h1>Homepage</h1>
-		<p class="my-4">Blog posts:</p>
+		<p class="my-4">Latest articles:</p>
 		<ul class="list-inside list-disc">
 			{
 				articles.map((article) => (
@@ -29,7 +28,6 @@ articles = articles
 				))
 			}
 		</ul>
-		<p class='py-4'><a class='underline' href={'/articles/page/1'}>See all articles ▶︎</a></p>
 		<p class='my-4'>Explore by tag:</p>
 		<div class='my-4 space-x-2'>
 			{
