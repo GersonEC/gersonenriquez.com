@@ -13,10 +13,7 @@ const { frontmatter, title } = Astro.props
 		<meta charset="UTF-8" />
 		<meta name='description' content={frontmatter?.description ? frontmatter.description : 'Gerson Enriquez blog'} />
 		<meta name="viewport" content="width=device-width" />
-		<meta
-  			property="og:image"
-  			content={`/public/gerson.png`}
-		/>
+		<meta property="og:image" content={`/public/gerson.png`} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
@@ -29,12 +26,16 @@ const { frontmatter, title } = Astro.props
 		/>
 		<ViewTransitions />
 	</head>
-	<body>
-		<p class=" text-yellow">⚠️This blog is work in progress.</p>
-		<Header />
-		<main>
+	<body class="bg-dark">
+		<header class=" min-h-20 border border-b-white border-b-1" >
+			<p class="text-yellow">⚠️This blog is work in progress.</p>
+			<Header/>
+		</header>
+		<main class="p-4 flex justify-center">
 			<slot />
 		</main>
-		<Footer />
+		<footer class="min-h-10 flex justify-center items-center">
+			<Footer />
+		</footer>
 	</body>
 </html>
