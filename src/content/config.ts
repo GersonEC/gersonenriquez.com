@@ -6,8 +6,8 @@ const articlesCollection = defineCollection({
     abstract: z.string(),
     date: z.date(),
     subtitle: z.string().optional(),
-    title: z.string(),
     tags: z.array(z.string()),
+    title: z.string(),
   }),
 })
 

@@ -1,17 +1,39 @@
 ---
 interface Props {
+	abstract: string;
+	date: Date;
+	slug: string;
+	subtitle?: string;
+	tags: string[];
 	title: string;
-	body: string;
-	href: string;
 }
 
-const { href, title, body } = Astro.props;
+const { abstract, date, slug, subtitle, tags, title } = Astro.props;
 /* TODO: Create this Article preview component to use in the article page */
 ---
 
-<li class="link-card">
-	Article preview
-</li>
+<div>
+	<div class="flex items-baseline justify-between">
+		<a href={`/articles/${slug}`}>
+			<h3 class=" text-3xl" >{title}</h3>
+		</a>
+		<span>{date.toLocaleDateString()}</span>
+	</div>
+	<h4 class=" text-gray-light">{subtitle}</h4>
+	<p>{abstract}</p>
+	<div>
+		{
+			tags.map(tag => (
+				<a
+					href={`/tag/${tag}`}
+					class='border border-white py-1 px-2 rounded-lg'
+				>
+					{tag}
+				</a>
+			))
+		}
+	</div>
+</div>
 <style>
 	.link-card {
 		list-style: none;
