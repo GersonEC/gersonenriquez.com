@@ -13,7 +13,7 @@ const { abstract, date, slug, subtitle, tags, title } = Astro.props;
 ---
 
 <div>
-	<div class="flex items-baseline justify-between">
+	<div class="flex items-baseline gap-5">
 		<a href={`/articles/${slug}`}>
 			<h3 class=" text-3xl" >{title}</h3>
 		</a>
