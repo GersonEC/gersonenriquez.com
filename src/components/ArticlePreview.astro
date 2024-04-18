@@ -6,10 +6,19 @@ interface Props {
 }
 
 const { href, title, body } = Astro.props;
+/* TODO: Create this Article preview component to use in the article page */
 ---
 
 <li class="link-card">
-	Article preview
+	<a href={href}>
+		<h2>
+			{title}
+			<span>&rarr;</span>
+		</h2>
+		<p>
+			{body}
+		</p>
+	</a>
 </li>
 <style>
 	.link-card {
