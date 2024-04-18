@@ -3,20 +3,20 @@ import { z, defineCollection } from 'astro:content'
 const articlesCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
+    abstract: z.string(),
     date: z.date(),
-    description: z.string().optional(),
+    subtitle: z.string().optional(),
+    title: z.string(),
     tags: z.array(z.string()),
-
   }),
 })
 
 const bookNotesCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
     date: z.date(),
     tags: z.array(z.string()),
+    title: z.string(),
 
   }),
 })
