@@ -18,21 +18,19 @@ articles = articles
 ---
 
 <Layout title="Articles">
-	<div class="flex justify-center overflow-hidden">
-		<div class="flex flex-col gap-y-20">
-			{
-				articles.map((article) => (
-					<ArticlePreview 
-						abstract={article.data.abstract}
-						title={article.data.title}
-						slug={article.slug}
-						subtitle={article.data.subtitle}
-						date={article.data.date}
-						tags={article.data.tags}
-					/>
-				))
-			}
-		</ul>
+	<div class="flex flex-col gap-y-20">
+		{
+			articles.map((article) => (
+				<ArticlePreview 
+					abstract={article.data.abstract}
+					title={article.data.title}
+					slug={article.slug}
+					subtitle={article.data.subtitle}
+					date={article.data.date}
+					tags={article.data.tags}
+				/>
+			))
+		}
 	</div>
 	<!-- <div>	
 		<Code code={`const foo = 'bar';`} lang="js" />
