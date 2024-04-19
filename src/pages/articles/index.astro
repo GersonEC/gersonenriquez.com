@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro';
-import { Code } from 'astro:components';
 import ArticlePreview from '@/src/components/ArticlePreview.astro';
 
 let articles = await getCollection('articles')
@@ -32,8 +31,4 @@ articles = articles
 			))
 		}
 	</div>
-	<!-- <div>	
-		<Code code={`const foo = 'bar';`} lang="js" />
-		<ReactCounter client:idle />
-	</div> -->
 </Layout>

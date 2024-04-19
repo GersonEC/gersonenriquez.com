@@ -15,3 +15,8 @@ I can link internally to [my conclusion](#conclusion) on the same page when writ
 ## Conclusion
 
 I can use the URL `https://example.com/page-1/#introduction` to navigate directly to my Introduction on the page.
+
+```js
+const x = 6;
+console.log("ciao")
+```
