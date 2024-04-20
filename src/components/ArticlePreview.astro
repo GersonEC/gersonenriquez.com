@@ -12,7 +12,7 @@ interface Props {
 const { abstract, date, slug, subtitle, tags, title } = Astro.props;
 ---
 
-<div class="flex flex-col w-4/6 m-auto ">
+<div class="flex flex-col m-auto ">
 	<div class="flex items-baseline gap-10">
 		<a href={`/articles/${slug}`}>
 			<h3 class=" text-3xl text-yellow-light hover:brightness-75 transition duration-200 ease-out-in " >{title}</h3>

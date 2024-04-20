@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro'
+import Tag from '@/src/components/Tag.astro'
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles')
@@ -15,18 +16,19 @@ const { Content } = await article.render()
 ---
 
 <Layout frontmatter={article.data} title={article.data.title}>
-  <p>tags</p>
-  <div class='my-4 space-x-2'>
+  <div class="flex items-baseline justify-between">
+    <h1 class='text-3xl font-bold text-yellow-light'>{article.data.title}</h1>
+    <span>{article.data.date.toLocaleDateString()}</span>
+  </div>
+
+  <Content />
+
+  <div class='my-4 space-x-2 flex justify-end'>
     {
       article.data.tags.map((tag: any) => (
-        <a
-          href={`/tag/${tag}`}
-          class='border border-white py-1 px-2 rounded-lg'>
-          {tag}
-        </a>
+        <Tag tag={tag} />
       ))
     }
   </div>
 
-  <Content />
 </Layout>
