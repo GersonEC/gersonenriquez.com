@@ -1,4 +1,5 @@
 ---
+import Tag from './Tag.astro';
 interface Props {
 	abstract: string;
 	date: Date;
@@ -11,24 +12,19 @@ interface Props {
 const { abstract, date, slug, subtitle, tags, title } = Astro.props;
 ---
 
-<div>
-	<div class="flex items-baseline gap-5">
+<div class="flex flex-col w-4/6 m-auto ">
+	<div class="flex items-baseline gap-10">
 		<a href={`/articles/${slug}`}>
-			<h3 class=" text-3xl" >{title}</h3>
+			<h3 class=" text-3xl text-yellow-light hover:brightness-75 transition duration-200 ease-out-in " >{title}</h3>
 		</a>
 		<span>{date.toLocaleDateString()}</span>
 	</div>
 	<h4 class=" text-gray-light">{subtitle}</h4>
 	<p>{abstract}</p>
-	<div>
+	<div class=" mt-4">
 		{
 			tags.map(tag => (
-				<a
-					href={`/tag/${tag}`}
-					class='border border-white py-1 px-2 rounded-lg'
-				>
-					{tag}
-				</a>
+				<Tag tag={tag} />
 			))
 		}
 	</div>
