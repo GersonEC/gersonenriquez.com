@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '../../layouts/Layout.astro'
+import ArticlePreview from '@/src/components/ArticlePreview.astro'
 
 export async function getStaticPaths() {
   let articles = await getCollection('articles')
@@ -28,17 +29,16 @@ const { articles } = Astro.props
 
 <Layout title='Posts by tag'>
   <p class='my-4'>Articles tagged {tag}:</p>
-
-  <ul class='list-inside list-disc'>
-    {
-      articles.map(article => (
-        <li>
-          <a class='underline' href={`/articles/${article.slug}`}>
-            {article.data.title}
-          </a>
-          <span>({article.data.date.toLocaleDateString()})</span>
-        </li>
-      ))
-    }
-  </ul>
+  {
+    articles.map((article) => (
+      <ArticlePreview 
+        abstract={article.data.abstract}
+        title={article.data.title}
+        slug={article.slug}
+        subtitle={article.data.subtitle}
+        date={article.data.date}
+        tags={article.data.tags}
+      />
+    ))
+  }
 </Layout>

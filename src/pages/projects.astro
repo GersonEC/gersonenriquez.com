@@ -1,10 +1,14 @@
 
 ---
+import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
 
 ---
 <Layout title="Projects">
-    <div class="flex justify-center">
-        <li><a href="https://budget-planner-coral-eta.vercel.app/" target="_blank">Budget planner</a></li>
-    </div>
+    <ProjectCard
+        title='Budget Planner'
+        description="Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione."
+        link="https://budget-planner-coral-eta.vercel.app/"
+        image="/budget-image.jpg"
+    />
 </Layout>
