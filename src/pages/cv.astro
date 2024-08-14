@@ -1,0 +1,47 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+const pageTitle = "CV";
+
+const companies = [
+  {
+    name: 'Edreams Odigeo',
+    role: 'Senior Frontend Engineer',
+    description: 'description',
+    startDate: '08/05/2023',
+    endDate: '30/08/2024'
+  },
+  {
+    name: 'Faire labs',
+    role: 'Senior Frontend Engineer',
+    description: 'description',
+    startDate: '01/05/2023',
+    endDate: '01/05/2024'
+  },
+]
+
+---
+<Layout title="About">
+  <div>
+      <h1>My CV</h1>
+      <div>
+        <h2>Technical Expertise</h2>
+        {
+          companies.map( (company) => (
+            <div>
+              <span>{company.startDate}</span>
+              <h3>{company.name}</h3>
+              <h4>{company.role}</h4>
+              <p>{company.description}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div>
+        <h2>Experiences</h2>
+      </div>
+      <div>
+        <h2>Education</h2>
+      </div>
+  </div>
+</Layout>
