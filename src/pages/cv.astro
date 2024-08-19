@@ -20,12 +20,39 @@ const companies = [
   },
 ]
 
+const expertiseStack = [
+  "React",
+  "Javascript",
+  "Typescript",
+  "Testing",
+  "HTML",
+  "CSS",
+  "Git",
+]
+
+const educationPath = [
+  "Università degli studi di Milano-Bicocca",
+  "Myes school",
+  "Wall street english",
+  "Marie Curie"
+]
+
 ---
-<Layout title="About">
+<Layout title="CV">
   <div>
       <h1>My CV</h1>
       <div>
-        <h2>Technical Expertise</h2>
+        <h2 class="text-2xl text-yellow-light">Technical Expertise</h2>
+        <ul>
+          {
+            expertiseStack.map((item) => (
+              <li>{item}</li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl text-yellow-light">Experiences</h2>
         {
           companies.map( (company) => (
             <div>
@@ -38,10 +65,14 @@ const companies = [
         }
       </div>
       <div>
-        <h2>Experiences</h2>
-      </div>
-      <div>
-        <h2>Education</h2>
+        <h2 class="text-2xl text-yellow-light">Education</h2>
+        <ul>
+        {
+          educationPath.map((item) => (
+              <li>{item}</li>
+          ))
+        }
+        </ul>
       </div>
   </div>
 </Layout>
