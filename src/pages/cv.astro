@@ -21,13 +21,30 @@ const companies = [
 ]
 
 const expertiseStack = [
-  "React",
-  "Javascript",
-  "Typescript",
-  "Testing",
-  "HTML",
-  "CSS",
-  "Git",
+  {
+    name: "React",
+    image: "/public/react.png"
+  },
+  {
+    name: "Javascript",
+    image: "/public/js.png"
+  },
+  {
+    name: "Typescript",
+    image: "/public/typescript.png"
+  },
+  {
+    name: "HTML",
+    image: "/public/html.png"
+  },
+  {
+    name: "CSS",
+    image: "/public/css.png"
+  },
+  {
+    name: "Git",
+    image: "/public/git.png"
+  },
 ]
 
 const educationPath = [
@@ -46,7 +63,10 @@ const educationPath = [
         <ul>
           {
             expertiseStack.map((item) => (
-              <li>{item}</li>
+              <div>
+                <li>{item.name}</li>
+                <img src={item.image}/>
+              </div>
             ))
           }
         </ul>
