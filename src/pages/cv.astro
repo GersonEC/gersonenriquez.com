@@ -4,19 +4,61 @@ import Layout from '@layouts/Layout.astro';
 const pageTitle = "CV";
 
 const companies = [
+{
+    name: 'Moltiply Group',
+    role: 'Senior Frontend Engineer',
+    description: 'Online travel agency company based in Barcelona and operating in 44 markets. One of the largest e-commerce businesses in Europe that serve over 21 million customers per year, connecting them with nearly 700 airlines.',
+    linkedin: "https://www.linkedin.com/company/moltiplygroup/mycompany/",
+    startDate: '01/09/2024',
+    endDate: '',
+  },
   {
     name: 'Edreams Odigeo',
     role: 'Senior Frontend Engineer',
-    description: 'description',
-    startDate: '08/05/2023',
+    description: 'Online travel agency company based in Barcelona and operating in 44 markets. One of the largest e-commerce businesses in Europe that serve over 21 million customers per year, connecting them with nearly 700 airlines.',
+    linkedin: "https://www.linkedin.com/company/edreamsodigeo/posts/?feedView=all",
+    startDate: '01/05/2023',
     endDate: '30/08/2024'
   },
   {
     name: 'Faire labs',
     role: 'Senior Frontend Engineer',
-    description: 'description',
-    startDate: '01/05/2023',
-    endDate: '01/05/2024'
+    description: 'Online travel agency company based in Barcelona and operating in 44 markets. One of the largest e-commerce businesses in Europe that serve over 21 million customers per year, connecting them with nearly 700 airlines.',
+    linkedin: "https://www.linkedin.com/company/faireai/posts/?feedView=all",
+    startDate: '01/05/2022',
+    endDate: '01/05/2023'
+  },
+  {
+    name: 'Flowing',
+    role: 'Frontend Engineer',
+    description: 'Online travel agency company based in Barcelona and operating in 44 markets. One of the largest e-commerce businesses in Europe that serve over 21 million customers per year, connecting them with nearly 700 airlines.',
+    linkedin: "https://www.linkedin.com/company/flowingis/",
+    startDate: '01/09/2021',
+    endDate: '01/05/2022'
+  },
+  {
+    name: 'WWG',
+    role: 'Frontend Engineer',
+    description: 'Online travel agency company based in Barcelona and operating in 44 markets. One of the largest e-commerce businesses in Europe that serve over 21 million customers per year, connecting them with nearly 700 airlines.',
+    linkedin: "https://www.linkedin.com/company/wwg-srl/posts/?feedView=all",
+    startDate: '01/03/2021',
+    endDate: '01/07/2021'
+  },
+  {
+    name: 'kwantis',
+    role: 'Frontend Engineer',
+    description: 'Online travel agency company based in Barcelona and operating in 44 markets. One of the largest e-commerce businesses in Europe that serve over 21 million customers per year, connecting them with nearly 700 airlines.',
+    linkedin: "https://www.linkedin.com/company/kwantis/posts/?feedView=all",
+    startDate: '01/03/2020',
+    endDate: '01/03/2021'
+  },
+  {
+    name: 'Techrain',
+    role: 'Frontend Engineer',
+    description: 'Online travel agency company based in Barcelona and operating in 44 markets. One of the largest e-commerce businesses in Europe that serve over 21 million customers per year, connecting them with nearly 700 airlines.',
+    linkedin: "https://www.linkedin.com/company/tech-rain/",
+    startDate: '01/12/2017',
+    endDate: '01/03/2020'
   },
 ]
 
@@ -57,42 +99,47 @@ const educationPath = [
 ---
 <Layout title="CV">
   <div>
-      <h1>My CV</h1>
       <div>
-        <h2 class="text-2xl text-yellow-light">Technical Expertise</h2>
-        <ul>
+        <h2 class="text-3xl text-yellow-light">Technical Expertise</h2>
+        <ul class="flex gap-12 justify-center items-center m-4 p-4 border border-gray-light">
           {
             expertiseStack.map((item) => (
               <div>
-                <li>{item.name}</li>
-                <img src={item.image}/>
+                <img 
+                  title={item.name}
+                  alt={item.name}
+                  width={`${item.name === "React" ? '78' : '44'}`}
+                  src={item.image}
+                />
               </div>
             ))
           }
         </ul>
       </div>
-      <div>
-        <h2 class="text-2xl text-yellow-light">Experiences</h2>
+      <section>
+        <h2 class="text-3xl text-yellow-light">Experiences</h2>
         {
           companies.map( (company) => (
-            <div>
-              <span>{company.startDate}</span>
-              <h3>{company.name}</h3>
-              <h4>{company.role}</h4>
-              <p>{company.description}</p>
+            <div class=" p-4">
+              <div class=" flex gap-6 items-baseline">
+                <a href={company.linkedin} class=" text-2xl text-pink-light hover:underline" target="_blank">{company.name}</a>
+                <span class=" text-base text-gray-light"><i>{company.startDate} - {company.endDate}</i></span>
+              </div>
+              <h4 class=" text-xl text-orange-light">{company.role}</h4>
+              <p class="">{company.description}</p>
             </div>
           ))
         }
-      </div>
-      <div>
-        <h2 class="text-2xl text-yellow-light">Education</h2>
+      </section>
+      <section>
+        <h2 class="text-3xl text-yellow-light">Education</h2>
         <ul>
-        {
-          educationPath.map((item) => (
-              <li>{item}</li>
-          ))
-        }
+          {
+            educationPath.map((item) => (
+                <li>{item}</li>
+            ))
+          }
         </ul>
-      </div>
+      </section>
   </div>
 </Layout>
