@@ -1,13 +1,18 @@
 ---
 const { title, link, image, description } = Astro.props;
 ---
-<a href={link} target="_blank">
-    <div class="
-    border-2 border-white rounded h-full
-    hover:cursor-pointer p-4 hover:border-pink-light"
-    >
-        <img class="" src={image} alt={title} class="w-1/2" />
-        <h1 class="text-pink text-2xl">{title}</h1>
-        <p>{description}</p>
+<div class="max-w-sm border border-gray-light rounded overflow-hidden shadow-lg">
+    <img class="w-1/2" src={image} alt={title}>
+    <div class="px-6 py-4">
+        <a href={link} target="_blank" class="font-bold text-xl mb-2 text-pink">{title}</a>
+        <p class="text-gray-700 text-base">
+            {description}
+        </p>
     </div>
-</a>
+    <div class="px-6 pt-4 pb-2">
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+    </div>
+</div>
+
