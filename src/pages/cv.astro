@@ -65,78 +65,121 @@ const companies = [
 const expertiseStack = [
   {
     name: "React",
-    image: "/public/react.png"
+    image: "/react.png"
   },
   {
     name: "Javascript",
-    image: "/public/js.png"
+    image: "/js.png"
   },
   {
     name: "Typescript",
-    image: "/public/typescript.png"
+    image: "/typescript.png"
   },
   {
     name: "HTML",
-    image: "/public/html.png"
+    image: "/html.png"
   },
   {
     name: "CSS",
-    image: "/public/css.png"
+    image: "/css.png"
   },
   {
     name: "Git",
-    image: "/public/git.png"
+    image: "/git.png"
   },
 ]
 
 const educationPath = [
-  "Università degli studi di Milano-Bicocca",
-  "Myes school",
-  "Wall street english",
-  "Marie Curie"
+  {
+    name: "Università degli studi di Milano-Bicocca",
+    description: "Computer science path. Bicocca is a young university that will connect you with students from all over the world. Since its foundation, the University of Milano-Bicocca has reached beyond its borders entering into various agreements with European and non-European universities. Teachers are members of international research groups that share numerous projects and initiatives.",
+  },
+  {
+    name: "Myes school",
+    description: "My English School è una rete di scuole di inglese senza senza libri né aule tradizionali, caratterizzata da un approccio totalmente nuovo. L’idea è quella di mettere al centro del progetto didattico lo studente, creare i presupposti per un reale apprendimento della lingua e rendere l'esperienza formativa appagante, unica e piacevole.",
+  },
+  {
+    name: "Wall street english",
+    description: "Scuola di Inglese con metodo flessibile e tecnologia all'avanguardia per un'esperienza di apprendimento unica sia nelle nostre scuole di inglese che online con il pieno supporto dei nostri Tutor madrelingua e Study Advisor.",
+  },
+  {
+    name: "ITIS Marie Curie",
+    description: "High school - Computer science.",
+  } 
+]
+
+const externalActivities = [
+  {
+    name: "React Milano meetup",
+    description: "I organize monthly meetups for the React community in Milan.",
+    website: "https://www.meetup.com/React-JS-Milano"
+  },
+  {
+    name: "Toastmasters International",
+    description: "I attend a public speaking club to improve my communication skills.",
+    website: "https://www.toastmasters.org/"
+  },
 ]
 
 ---
 <Layout title="CV">
   <div>
-      <div>
+      <section>
         <h2 class="text-3xl text-yellow-light">Technical Expertise</h2>
         <ul class="flex gap-12 justify-center items-center m-4 p-4 border border-gray-light">
           {
             expertiseStack.map((item) => (
-              <div>
+              <li>
                 <img 
                   title={item.name}
                   alt={item.name}
                   width={`${item.name === "React" ? '78' : '44'}`}
                   src={item.image}
                 />
-              </div>
+              </li>
             ))
           }
         </ul>
-      </div>
+      </section>
       <section>
         <h2 class="text-3xl text-yellow-light">Experiences</h2>
-        {
-          companies.map( (company) => (
-            <div class=" p-4">
-              <div class=" flex gap-6 items-baseline">
-                <a href={company.linkedin} class=" text-2xl text-pink-light hover:underline" target="_blank">{company.name}</a>
-                <span class=" text-base text-gray-light"><i>{company.startDate} - {company.endDate}</i></span>
-              </div>
-              <h4 class=" text-xl text-orange-light">{company.role}</h4>
-              <p class="">{company.description}</p>
-            </div>
-          ))
-        }
+        <ul>
+          {
+            companies.map( (company) => (
+              <li class=" p-4">
+                <div class=" flex gap-6 items-baseline">
+                  <a href={company.linkedin} class=" text-2xl text-pink-light hover:underline" target="_blank">{company.name}</a>
+                  <span class=" text-base text-gray-light"><i>{company.startDate} - {company.endDate}</i></span>
+                </div>
+                <h4 class=" text-xl text-orange-light">{company.role}</h4>
+                <p class="">{company.description}</p>
+              </li>
+            ))
+          }
+        </ul>
       </section>
       <section>
         <h2 class="text-3xl text-yellow-light">Education</h2>
         <ul>
           {
             educationPath.map((item) => (
-                <li>{item}</li>
+              <li class=" p-4">
+                <h3 class=" text-2xl text-pink-light">{item.name}</h3>
+                <p class="">{item.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section>
+        <h2 class="text-3xl text-yellow-light">External Activities</h2>
+        <ul>
+          {
+            externalActivities.map((item) => (
+              <li class=" p-4">
+                <a href={item.website} class=" text-2xl text-pink-light hover:underline" target="_blank">{item.name}</a>
+                <p class="">{item.description}</p>
+              </li>
             ))
           }
         </ul>
