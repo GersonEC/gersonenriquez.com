@@ -2,8 +2,8 @@
 const { title, link, image, description } = Astro.props;
 ---
 <div class="max-w-sm border border-gray-light rounded overflow-hidden shadow-lg">
-    <img class="w-1/2" src={image} alt={title}>
-    <div class="px-6 py-4">
+    <img class="object-cover h-48 w-96" src={image} alt={title} />
+    <div class="px-6 py-4 h-48">
         <a href={link} target="_blank" class="font-bold text-xl mb-2 text-pink">{title}</a>
         <p class="text-gray-700 text-base">
             {description}
