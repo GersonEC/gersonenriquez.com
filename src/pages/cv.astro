@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import Print from '../components/Print.astro';
 
 const pageTitle = "CV";
 
@@ -122,8 +123,12 @@ const externalActivities = [
 ]
 
 ---
-<Layout title="CV">
+<Layout title={pageTitle}>
   <div>
+      <Print
+        title="Print"
+        id="print-button"
+      />
       <section>
         <h2 class="text-3xl text-yellow-light">Technical Expertise</h2>
         <ul class="flex gap-12 justify-center items-center m-4 p-4 border border-gray-light">
