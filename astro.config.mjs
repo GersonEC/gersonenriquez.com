@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
-import sitemap from "@astrojs/sitemap";
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://gersonenriquez.com',
-  integrations: [tailwind(), sitemap()]
+  integrations: [tailwind(), sitemap(), react()],
 });

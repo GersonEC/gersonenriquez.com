@@ -1,17 +1,18 @@
 ---
+import Drawer from './Drawer'
 ---
-<nav class=" h-20 flex justify-around items-center">
-    <div>
-        <a href="/" class='font-mono text-lg'>Gerson Enriquez</a>
+<nav class="">
+    <div class="flex justify-between pt-4 pb-4 pl-8 pr-8">
+        <div>
+            <a href="/" class='font-mono text-lg'>Gerson Enriquez</a>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+            <a href="/now" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Now</a>
+            <a href="/projects" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Projects</a>
+            <a href="/articles/" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Articles</a>
+            <a href="/booknotes/" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Book Notes</a>
+            <a href="/cv/" class=' text-lg hover:brightness-75 transition duration-200 ease-out-in'>CV</a>
+        </div>
     </div>
-    <div class="hidden sm:flex sm:items-center">
-        <a href="/now" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Now</a>
-        <a href="/projects" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Projects</a>
-        <a href="/articles/" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Articles</a>
-        <a href="/booknotes/" class='mr-5 text-lg hover:brightness-75 transition duration-200 ease-out-in'>Book Notes</a>
-        <a href="/cv/" class=' text-lg hover:brightness-75 transition duration-200 ease-out-in'>CV</a>
-    </div>
-    <div class="sm:hidden">
-       <img src="/menu.svg" alt="menu"/>
-    </div>
+    <Drawer client:load />
 </nav>
