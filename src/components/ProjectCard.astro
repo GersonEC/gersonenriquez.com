@@ -1,13 +1,26 @@
 ---
 const { title, link, image, description } = Astro.props;
 ---
-<div class="max-w-sm border border-gray-light rounded overflow-hidden shadow-lg">
-    <img class="object-cover h-48 w-96" src={image} alt={title} />
-    <div class="p-4 h-48">
-        <a href={link} target="_blank" class="font-bold text-xl mb-2 text-pink">{title}</a>
-        <p class="text-gray-700 text-base">
-            {description}
-        </p>
-    </div>
-</div>
 
+<div
+  class='max-w-sm border border-gray-light rounded overflow-hidden shadow-lg'
+>
+  <img class='object-cover h-48 w-96' src={image} alt={title} />
+  <div class='p-4 h-48 flex justify-between flex-col'>
+    <a
+      href={link}
+      target='_blank'
+      class='font-bold text-xl mb-2 text-pink hover:brightness-150 transition duration-200'
+      >{title}</a
+    >
+    <p class='text-gray-700 text-base'>
+      {description}
+    </p>
+    <a
+      class='flex gap-1 text-sm text-blue-light hover:brightness-150 transition duration-200'
+      href={'https://github.com/GersonEC/disney-characters'}
+      target='_blank'
+      ><img src='/github.svg' width={20} />See the code
+    </a>
+  </div>
+</div>
