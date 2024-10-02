@@ -1,5 +1,5 @@
 ---
-const { title, link, image, description } = Astro.props;
+const { title, link, image, description, githubLink } = Astro.props;
 ---
 
 <div
@@ -18,7 +18,7 @@ const { title, link, image, description } = Astro.props;
     </p>
     <a
       class='flex gap-1 text-sm text-blue-light hover:underline transition duration-200'
-      href={'https://github.com/GersonEC/disney-characters'}
+      href={githubLink}
       target='_blank'
       ><img src='/github.svg' width={20} />See the code
     </a>
