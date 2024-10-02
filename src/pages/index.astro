@@ -3,20 +3,28 @@ import Layout from '@layouts/Layout.astro';
 import Social from '../components/Social.astro';
 ---
 
-<Layout title="Homepage">
-	<div class="grid place-items-center ">
-		<div>
-			<img src="/gerson-circle.png" class=" w-56 sm:w-96" alt="Gerson"/>
-		</div>
-		<div>
-			<h3 class=" text-md pt-4 text-center sm:text-2xl">I'm Gerson, a software engineer specialized in the frontend.</h3>
-			<h3 class=" text-sm pt-2 text-center font-thin sm:text-2xl">Co-organizer of <a href="https://www.meetup.com/React-JS-Milano/" target="_blank" class="underline text-blue-light hover:text-blue">React JS Milano meetup</a></h3>
-		</div>
-		<div class="flex mt-12">
-			<Social platform="linkedin" username="gerson-enriquez" />
-			<Social platform="github" username="GersonEC" />
-			<Social platform="twitter" username="EC_Gerson" />
-			<Social platform="youtube" username="@reactjsmilanomeetup" />
-		</div>
-	</div>
+<Layout title='Homepage'>
+  <div class='grid place-items-center'>
+    <div>
+      <img src='/gerson-circle.png' class='w-56 sm:w-96' alt='Gerson' />
+    </div>
+    <div>
+      <h3 class='text-md pt-4 text-center sm:text-2xl'>
+        I'm Gerson, a software engineer specialized in the frontend.
+      </h3>
+      <h3 class='text-sm pt-2 text-center font-thin sm:text-2xl'>
+        Co-organizer of <a
+          href='https://www.meetup.com/React-JS-Milano/'
+          target='_blank'
+          class='text-blue-light hover:underline transition duration-200'
+          >React JS Milano meetup</a>
+      </h3>
+    </div>
+    <div class='flex mt-12'>
+      <Social platform='linkedin' username='gerson-enriquez' />
+      <Social platform='github' username='GersonEC' />
+      <Social platform='twitter' username='EC_Gerson' />
+      <Social platform='youtube' username='@reactjsmilanomeetup' />
+    </div>
+  </div>
 </Layout>
