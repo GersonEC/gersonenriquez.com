@@ -10,14 +10,14 @@ const { title, link, image, description } = Astro.props;
     <a
       href={link}
       target='_blank'
-      class='font-bold text-xl mb-2 text-pink hover:brightness-150 transition duration-200'
+      class='font-bold text-xl mb-2 text-pink hover:underline transition duration-200'
       >{title}</a
     >
     <p class='text-gray-700 text-base'>
       {description}
     </p>
     <a
-      class='flex gap-1 text-sm text-blue-light hover:brightness-150 transition duration-200'
+      class='flex gap-1 text-sm text-blue-light hover:underline transition duration-200'
       href={'https://github.com/GersonEC/disney-characters'}
       target='_blank'
       ><img src='/github.svg' width={20} />See the code
