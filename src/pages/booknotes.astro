@@ -1,24 +1,19 @@
-
 ---
-import Layout from "../layouts/Layout.astro";
-
+import BookCard from '../components/BookCard.astro';
+import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Booknotes" page="booknotes">
-    <div class="flex flex-wrap gap-10 justify-center">
-        <a class="p-1 border-2 border-gray-light rounded overflow-hidden shadow-lg  hover:scale-105 transition ease-in-out duration-200" href="/booknotes/the-untethered-soul/">
-            <img class=" h-80" src="/the_untethered_soul.jpg" />
-        </a>
-        <a class="p-1 border-2 border-gray-light rounded overflow-hidden shadow-lg  hover:scale-105 transition ease-in-out duration-200" href="/booknotes/the-untethered-soul/">
-            <img class=" h-80" src="/the_untethered_soul.jpg" />
-        </a>
-        <a class="p-1 border-2 border-gray-light rounded overflow-hidden shadow-lg  hover:scale-105 transition ease-in-out duration-200" href="/booknotes/the-untethered-soul/">
-            <img class=" h-80" src="/the_untethered_soul.jpg" />
-        </a>
-        <a class="p-1 border-2 border-gray-light rounded overflow-hidden shadow-lg  hover:scale-105 transition ease-in-out duration-200" href="/booknotes/the-untethered-soul/">
-            <img class=" h-80" src="/the_untethered_soul.jpg" />
-        </a>
-        <a class="p-1 border-2 border-gray-light rounded overflow-hidden shadow-lg  hover:scale-105 transition ease-in-out duration-200" href="/booknotes/the-untethered-soul/">
-            <img class=" h-80" src="/the_untethered_soul.jpg" />
-        </a>
-    </div>
+
+<Layout title='Booknotes' page='booknotes'>
+  <div class='flex flex-wrap gap-10 justify-center'>
+    <BookCard
+      title='The Staff Engineer Parth'
+      image='/the_staff_engineer_path.jpg'
+      link='/booknotes/the-staff-engineer-path'
+    />
+    <BookCard
+      title='The Untethered Soul'
+      image='/the_untethered_soul.jpg'
+      link='/booknotes/the-untethered-soul/'
+    />
+  </div>
 </Layout>
