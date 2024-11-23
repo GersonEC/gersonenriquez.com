@@ -1,26 +1,34 @@
 ---
 title: 'The Untethered Soul'
 date: 2024-02-08
-tags: ["book-notes", "self-awareness"]
+tags: ['book-notes', 'self-awareness']
 ---
 
-> ***Per mantenere relazioni oneste con gli altri, prima dobbiamo essere veri con noi stessi.***
-> 
+> **_Per mantenere relazioni oneste con gli altri, prima dobbiamo essere veri con noi stessi._**
 
-ID → primal animal nature
+</br>
+
+ID → primal animal nature.
+
+</br>
 
 Superego → Quello che la società e il sistema ci ha imposto
 
+</br>
+
 Ego → La nostra rappresentazione verso il mondo esterno che lotta per avere un equilibrio tra ID e superego.
 
+</br>
+
 ## The voice inside your head
+
+</br>
 
 - Non sono nessuna voce della mia mente, ne quella motivante ne quella più cazzuta.
 - I miei pensieri non hanno nessun impatto su questo mondo.
 - Perché la mia vocina esiste? Narra il mondo per me e tenta di trovare un modo per confortarsi e giustificarsi, ma mica ne ho bisogno. Devo vedere la mia voce nella testa in modo oggettivo → Sono sempre IO quello che pensa nella mia testa.
 
 > **IO NON SONO LA VOCE NELLA MIA MENTE, IO SONO QUELLO CHE LO ASCOLTA.**
-> 
 
 ## Your inner roommate
 
@@ -28,7 +36,7 @@ Ego → La nostra rappresentazione verso il mondo esterno che lotta per avere un
 - Il mio IO interno non è mai soddisfatto, ha sempre un problema su qualcosa. Guardare i problemi in modo oggettivo invece di perdermi tra di essi. Non possiamo affrontare i problemi se siamo impattati emotivamente. I problemi vanno risolti soprattutto all’interno di me.
 
 > **Devo accettare tutte le situazioni che mi accadono e non resistere ad esse.**
-> 
+
 - Il mio roommate può rovinare qualsiasi cosa in qualsiasi momento.
 
 ## Who are you
@@ -94,7 +102,7 @@ Ego → La nostra rappresentazione verso il mondo esterno che lotta per avere un
 ## Taking down the walls
 
 - Bisogna affrontare le paure passate. Into the storm!
-- ***When you defend yourself, you are defending your walls. There is nothing to defend!***
+- **_When you defend yourself, you are defending your walls. There is nothing to defend!_**
 - True freedom is on the other side of the walls!
 
 ## Far far beyond

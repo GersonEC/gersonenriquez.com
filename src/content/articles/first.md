@@ -10,7 +10,7 @@ tags:
 
 <style>
     .highlight {
-      color: yellow;
+      color: red;
     }
 </style>
 
