@@ -1,18 +1,20 @@
 ---
 import BookCard from '../components/BookCard.astro';
 import Layout from '../layouts/Layout.astro';
+import StaffEng from '../assets/the_staff_engineer_path.jpg';
+import UntetheredSoul from '../assets/the_untethered_soul.jpg';
 ---
 
 <Layout title='Booknotes' page='booknotes'>
   <div class='flex flex-wrap gap-10 justify-center'>
     <BookCard
       title='The Staff Engineer Parth'
-      image='/the_staff_engineer_path.jpg'
+      image={StaffEng}
       link='/booknotes/the-staff-engineer-path'
     />
     <BookCard
       title='The Untethered Soul'
-      image='/the_untethered_soul.jpg'
+      image={UntetheredSoul}
       link='/booknotes/the-untethered-soul/'
     />
   </div>

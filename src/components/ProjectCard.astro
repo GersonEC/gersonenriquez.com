@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+
 const { title, link, image, description, githubLink } = Astro.props;
 ---
 
 <div
   class='max-w-sm border border-gray-light rounded overflow-hidden shadow-lg'
 >
-  <img class='object-cover h-48 w-96' src={image} alt={title} />
+  <Image class='object-cover h-48 w-96' src={image} alt={title} />
   <div class='p-4 h-48 flex justify-between flex-col'>
     <a
       href={link}
