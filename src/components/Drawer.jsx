@@ -49,7 +49,7 @@ const Drawer = () => {
         </div>
       ) : (
         <div className='sm:hidden'>
-          <img src='/menu.svg' alt='menu' onClick={handleOpen} />
+          <img src='/src/assets/menu.svg' alt='menu' onClick={handleOpen} />
         </div>
       )}
     </div>
