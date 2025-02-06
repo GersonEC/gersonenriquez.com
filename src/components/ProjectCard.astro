@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import GithubImg from '../assets/github.svg';
 
 const { title, link, image, description, githubLink } = Astro.props;
 ---
@@ -22,7 +23,7 @@ const { title, link, image, description, githubLink } = Astro.props;
       class='flex gap-1 text-sm text-blue-light hover:underline transition duration-200'
       href={githubLink}
       target='_blank'
-      ><img src='/github.svg' width={20} />See the code
+      ><Image src={GithubImg} width={20} alt={'github image'} />See the code
     </a>
   </div>
 </div>
