@@ -13,8 +13,9 @@ const { abstract, date, slug, subtitle, tags, title } = Astro.props;
 ---
 
 <div class='flex flex-col m-auto'>
-  <div class='flex items-baseline justify-between'>
-    <div class='flex gap-8 items-baseline'>
+  <div class='flex items-end justify-between gap-2'>
+    <div class='flex flex-col items-baseline'>
+      <p>{tags.map((tag) => <Tag tag={tag} />)}</p>
       <a href={`/articles/${slug}`}>
         <h3
           class='text-3xl text-yellow-light hover:brightness-75 transition duration-200 ease-out-in'
@@ -22,12 +23,9 @@ const { abstract, date, slug, subtitle, tags, title } = Astro.props;
           {title}
         </h3>
       </a>
-      <span class='text-gray italic text-md'>{date.toLocaleDateString()}</span>
     </div>
 
-    <div>
-      {tags.map((tag) => <Tag tag={tag} />)}
-    </div>
+    <p class='text-gray italic text-md'>{date.toLocaleDateString()}</p>
   </div>
   <h4 class='text-gray-light'>{subtitle}</h4>
   <p>{abstract}</p>

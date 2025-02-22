@@ -8,7 +8,7 @@ const Drawer = () => {
   };
 
   return (
-    <div className=' absolute top-4 right-4'>
+    <div className=' absolute top-0 right-0'>
       {isOpen ? (
         <div className='h-screen w-screen z-10 bg-dark flex flex-col justify-start p-8 rounded'>
           <div
@@ -53,8 +53,19 @@ const Drawer = () => {
           </div>
         </div>
       ) : (
-        <div className='sm:hidden'>
-          <img src='/src/assets/menu.svg' alt='menu' onClick={handleOpen} />
+        <div
+          className='flex flex-col gap-1 sm:hidden mt-5 mr-5'
+          onClick={handleOpen}
+        >
+          <span className=' flex w-6 bg-white h-0.5 text-gray text-opacity-0'>
+            ----
+          </span>
+          <span className=' flex w-6 bg-white h-0.5 text-gray text-opacity-0'>
+            ----
+          </span>
+          <span className=' flex w-6 bg-white h-0.5 text-gray text-opacity-0'>
+            ----
+          </span>
         </div>
       )}
     </div>
