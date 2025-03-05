@@ -19,11 +19,17 @@ const { title, link, image, description, githubLink } = Astro.props;
     <p class='text-gray-700 text-base'>
       {description}
     </p>
-    <a
-      class='flex gap-1 text-sm text-blue-light hover:underline transition duration-200'
-      href={githubLink}
-      target='_blank'
-      ><Image src={GithubImg} width={20} alt={'github image'} />See the code
-    </a>
+    {
+      githubLink && (
+        <a
+          class='flex gap-1 text-sm text-blue-light hover:underline transition duration-200'
+          href={githubLink}
+          target='_blank'
+        >
+          <Image src={GithubImg} width={20} alt={'github image'} />
+          See the code
+        </a>
+      )
+    }
   </div>
 </div>

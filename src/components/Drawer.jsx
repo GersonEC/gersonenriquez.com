@@ -32,6 +32,12 @@ const Drawer = () => {
               Projects
             </a>
             <a
+              href='/talks'
+              className='mr-5 text-3xl hover:brightness-75 transition duration-200 ease-out-in'
+            >
+              Talks
+            </a>
+            <a
               href='/articles/'
               className='mr-5 text-3xl hover:brightness-75 transition duration-200 ease-out-in'
             >
