@@ -31,18 +31,16 @@ const { frontmatter, title, page } = Astro.props;
     />
     <ViewTransitions />
   </head>
-  <body class='bg-dark'>
+  <body class='bg-light'>
     <header
       class='text-white sticky top-0 z-40 w-full backdrop-blur transition-colors mb-2'
     >
       <Header />
     </header>
-    <main
-      class=`py-2 px-6 ${page === "projects" || page === "booknotes" ? 'w-5/6' : 'w-full md:w-3/5 lg:w-3/5 xl:w-3/6 2xl:w-2/4'} m-auto`
-    >
+    <main class='border-2 border-blue max-w-6xl mx-auto'>
       <slot />
     </main>
-    <footer class='flex justify-center items-end'>
+    <footer class='flex justify-center items-end border-2 border-yellow'>
       <Footer />
     </footer>
   </body>
