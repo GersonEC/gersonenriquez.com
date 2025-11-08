@@ -1,21 +1,20 @@
 ---
 import TalkCard from '../components/TalkCard.astro';
-import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title='Talks'>
+<section class='flex flex-col gap-8 sm:gap-16'>
+  <h2 class='text-4xl font-semibold text-center'>My Talks</h2>
+
   <TalkCard
     title='Closures: the JS backpack'
     where='Codemotion Milan 2023'
     description='Closures are one of the topics that you can even know its existence, but once you really understand it, it unlocks a superpower. In this talk, we will see what is a Closure, why it is important, and some examples using the backpack metaphor.'
     link='https://talks.codemotion.com/closures-the-js-backpack?_gl=1%2abx5qnj%2a_gcl_aw%2aR0NMLjE3MjY0ODQ1MzcuQ2owS0NRandycC0zQmhEZ0FSSXNBRVdKNlN4YXRQdFVvRVJrN05aRHQ1UnRQelRCZUdOM3U1UUl2Rm16OUwxcElVTmVXTDY0QVhwLTBzd2FBbGV6RUFMd193Y0I.%2a_gcl_au%2aMTE0MTY0NTUxNS4xNzI2NDg0NTM2%2a_ga%2aNTQxNTc2MTQzLjE3MjY0ODQ1Mzc.%2a_ga_52S30H0VCG%2aMTcyOTUyNTgyMi41LjEuMTcyOTUyNTgzMC41Mi4wLjA.%2a_ga_C9WPJMT5LH%2aMTcyOTUyNTgyMi41LjEuMTcyOTUyNTgzMi4wLjAuMA..&_ga=2.218106079.730635770.1729497448-541576143.1726484537&_gac=1.227932399.1726484537.Cj0KCQjwrp-3BhDgARIsAEWJ6SxatPtUoERk7NZDt5RtPzTBeGN3u5QIvFmz9L1pIUNeWL64AXp-0swaAlezEALw_wcB'
-    image='/talk_closures.png'
   />
   <TalkCard
     title="The Road to learn Microfrontends: l'inizio di un nuovo viaggio"
     where='Come To Code 2024'
-    description='Closures are one of the topics that you can even know its existence, but once you really understand it, it unlocks a superpower. In this talk, we will see what is a Closure, why it is important, and some examples using the backpack metaphor.'
+    description='Microfrontends are a way to build web applications by breaking down the application into smaller, independent parts. In this talk, we will see what are Microfrontends, why they are important, and some examples of how to implement them.'
     link='https://www.youtube.com/watch?v=ZryqWoUTWbo&t=758s'
-    image='/talk_closures.png'
   />
-</Layout>
+</section>

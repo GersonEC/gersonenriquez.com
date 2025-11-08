@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import GersonCircle from '../assets/me.jpg';
+import Linkedin from '../assets/linkedin.svg';
+import Github from '../assets/github-black.svg';
+import Twitter from '../assets/twitter.svg';
+import Youtube from '../assets/youtube.svg';
+import Social from './Social.astro';
+---
+
+<section class='bg-yellow min-h-[500px] flex items-center justify-center'>
+  <div
+    class='grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center max-w-5xl px-4 py-12 sm:py-16 sm:px-8'
+  >
+    <div>
+      <Image
+        src={GersonCircle}
+        class='w-72 rounded-lg'
+        alt='Gerson picture'
+        .
+      />
+    </div>
+    <div class='flex flex-col gap-10 items-center justify-center'>
+      <div class='space-y-2'>
+        <h1 class='text-md text-center text-xl sm:text-4xl'>Hi! I'm Gerson</h1>
+        <h2 class='text-md text-center text-black-light text-lg sm:text-2xl'>
+          I build products and share my learnings.
+        </h2>
+      </div>
+      <div class='flex'>
+        <Social
+          platform='linkedin'
+          username='gerson-enriquez'
+          image={Linkedin}
+        />
+        <Social platform='github' username='GersonEC' image={Github} />
+        <Social platform='twitter' username='EC_Gerson' image={Twitter} />
+        <Social
+          platform='youtube'
+          username='@reactjsmilanomeetup'
+          image={Youtube}
+        />
+      </div>
+    </div>
+  </div>
+</section>

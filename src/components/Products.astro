@@ -1,0 +1,23 @@
+---
+import ProductCard from '../components/ProductCard.astro';
+import SaveTheFood from '../assets/savethefood-icon.png';
+import HappyBudget from '../assets/happybudget-icon.png';
+---
+
+<section class='flex flex-col gap-8 sm:gap-16'>
+  <h2 class='text-4xl font-semibold text-center'>My Products</h2>
+  <div class='grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center'>
+    <ProductCard
+      title='Save The Food'
+      description='Il costo di una ricetta diventa semplice. Calcola in un attimo quanto costa una ricetta tenendo in considerazione il test di resa degli ingredienti.'
+      link='https://savethefood.app/'
+      image={SaveTheFood}
+    />
+    <ProductCard
+      title='Happy Budget'
+      description='Padroneggia le tue finanze con facilità. Pianifica, traccia, e raggiungi i tuoi obiettivi finanziari con Happybudget.'
+      link='https://happybudget.it/'
+      image={HappyBudget}
+    />
+  </div>
+</section>

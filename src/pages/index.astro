@@ -1,41 +1,32 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Social from '../components/Social.astro';
-import { Image } from 'astro:assets';
-import GersonCircle from '../assets/gerson-circle.png';
-import Linkedin from '../assets/linkedin.svg';
-import Github from '../assets/github.svg';
-import Twitter from '../assets/twitter.svg';
-import Youtube from '../assets/youtube.svg';
+import Now from '../components/Now.astro';
+import Products from '../components/Products.astro';
+import Talks from '../components/Talks.astro';
+import Hero from '../components/Hero.astro';
+import Comunities from '../components/Comunities.astro';
 ---
 
-<Layout title='Homepage'>
-  <div class='grid place-items-center'>
-    <div>
-      <Image src={GersonCircle} class='w-56 sm:w-96' alt='Gerson picture' . />
+<Layout title='Gerson Enriquez'>
+  <div class='space-y-8 sm:space-y-12'>
+    <div class=''>
+      <Hero />
     </div>
-    <div>
-      <h3 class='text-md pt-4 text-center sm:text-2xl'>
-        I'm Gerson, a software engineer specialized in the frontend.
-      </h3>
-      <h3 class='text-sm pt-2 text-center font-thin sm:text-2xl'>
-        Co-organizer of <a
-          href='https://www.meetup.com/React-JS-Milano/'
-          target='_blank'
-          class='text-blue-light hover:underline transition duration-200'
-          >React JS Milano meetup</a
-        >
-      </h3>
+
+    <div class='max-w-6xl mx-auto p-4 sm:p-8'>
+      <Now />
     </div>
-    <div class='flex mt-12'>
-      <Social platform='linkedin' username='gerson-enriquez' image={Linkedin} />
-      <Social platform='github' username='GersonEC' image={Github} />
-      <Social platform='twitter' username='EC_Gerson' image={Twitter} />
-      <Social
-        platform='youtube'
-        username='@reactjsmilanomeetup'
-        image={Youtube}
-      />
+
+    <div class='max-w-6xl mx-auto p-4 sm:p-8'>
+      <Products />
+    </div>
+
+    <div class='max-w-6xl mx-auto p-4 sm:p-8'>
+      <Comunities />
+    </div>
+
+    <div class='max-w-6xl mx-auto p-4 sm:p-8'>
+      <Talks />
     </div>
   </div>
 </Layout>

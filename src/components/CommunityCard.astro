@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+
+const { title, link, image, description } = Astro.props;
+---
+
+<div
+  class='max-w-sm border border-orange-dark rounded-xl shadow-md hover:shadow-xl transition-shadow duration-200'
+>
+  <Image
+    class='object-contain h-72 w-96 rounded-t-xl border-b border-dashed border-orange-dark p-4'
+    src={image}
+    alt={title}
+  />
+  <div class='p-4 h-36 flex flex-col'>
+    <a
+      href={link}
+      target='_blank'
+      class='font-bold text-xl mb-2 text-orange hover:underline transition duration-200 text-center'
+      >{title}</a
+    >
+    <p class='text-gray-700 text-base'>
+      {description}
+    </p>
+  </div>
+</div>

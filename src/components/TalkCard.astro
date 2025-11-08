@@ -1,18 +1,17 @@
 ---
-const { title, link, image, description, where } = Astro.props;
+const { title, link, description, where } = Astro.props;
 ---
 
 <div class='flex gap-4 items-start mb-6'>
-  <!-- <img class='object-cover p-2' width='300px' src={image} alt={title} /> -->
   <div>
     <a
       href={link}
-      class='text-3xl text-yellow-light hover:brightness-75 transition duration-200 ease-out-in'
+      class='text-3xl text-orange-dark hover:brightness-75 transition duration-200 ease-out-in'
       target='_blank'
     >
       {title}
     </a>
-    <p class='text-base text-gray-light'>
+    <p class='text-base text-gray'>
       {where}
     </p>
     <p class='text-gray-700 text-md'>
