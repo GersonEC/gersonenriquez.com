@@ -5,8 +5,8 @@ const { platform, username, image } = Astro.props;
 ---
 
 <a
-  class='color mr-8 hover:brightness-75 transition duration-200 ease-out-in'
-  href={`https://www.${platform}.com/${platform === 'linkedin' ? `/in/${username}` : username}`}
+  class='mr-6 hover:opacity-70 transition duration-200 ease-out-in'
+  href={`https://www.${platform}.com/${platform === 'linkedin' ? `in/${username}` : username}`}
   target='_blank'
 >
   <Image src={image} alt={`${platform} icon`} title={`${platform}`} />

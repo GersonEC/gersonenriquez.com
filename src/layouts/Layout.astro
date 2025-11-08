@@ -1,10 +1,9 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
 import '@styles/global.css';
 
-const { frontmatter, title, page } = Astro.props;
+const { frontmatter, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,8 +17,10 @@ const { frontmatter, title, page } = Astro.props;
         : 'Gerson Enriquez blog'}
     />
     <meta name='viewport' content='width=device-width' />
-    <meta property='og:image' content={`/public/gerson.png`} />
-    <link rel='icon' type='image/svg+xml' href='/gerson-circle.png' />
+    <meta property='og:image' content={`/public/me.jpg`} />
+    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='apple-touch-icon' href='/favicon.ico' />
     <link rel='sitemap' href='/sitemap-index.xml' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
@@ -29,18 +30,19 @@ const { frontmatter, title, page } = Astro.props;
       title='My cool blog'
       href='/rss.xml'
     />
-    <ViewTransitions />
   </head>
   <body class='bg-light'>
     <header
-      class='text-white sticky top-0 z-40 w-full backdrop-blur transition-colors mb-2'
+      class='sticky top-0 z-40 w-full backdrop-blur bg-white transition-colors h-[72px] border-b border-gray-light'
     >
       <Header />
     </header>
-    <main class='border-2 border-blue max-w-6xl mx-auto'>
+    <main class='mx-auto'>
       <slot />
     </main>
-    <footer class='flex justify-center items-end border-2 border-yellow'>
+    <footer
+      class='flex justify-center items-center border-t border-gray-light min-h-32'
+    >
       <Footer />
     </footer>
   </body>

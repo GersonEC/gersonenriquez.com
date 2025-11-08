@@ -1,0 +1,25 @@
+---
+import CommunityCard from '../components/CommunityCard.astro';
+import IndieMilano from '../assets/indieMilano-logo.png';
+import ReactMilano from '../assets/react-milano-logo.png';
+---
+
+<section class='flex flex-col gap-8 sm:gap-16'>
+  <h2 class='text-4xl font-semibold text-center'>Communities I Organize</h2>
+  <div>
+    <div class='grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center'>
+      <CommunityCard
+        title='Indie Milano'
+        description='IndieMilano is a community of indie hackers, solopreneurs, and makers building digital products from Milan.'
+        link='https://t.me/+HvRTSbtKykk0NTI0'
+        image={IndieMilano}
+      />
+      <CommunityCard
+        title='ReactJS Milano'
+        description='ReactJS Milano is a community of developers that meet every month to discuss and learn about ReactJS in Milan.'
+        link='https://t.me/+RZxo474PyO9kMzk0'
+        image={ReactMilano}
+      />
+    </div>
+  </div>
+</section>
