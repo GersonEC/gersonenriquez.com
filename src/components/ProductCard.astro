@@ -5,11 +5,11 @@ const { title, image, link, description } = Astro.props;
 ---
 
 <div
-  class='flex max-w-xl h-[176px] min-w-[450px] border border-orange-dark rounded-xl shadow-md hover:shadow-xl transition-shadow duration-200'
+  class='flex w-full max-w-xl h-[176px] sm:min-w-[450px] border border-orange-dark rounded-xl shadow-md hover:shadow-xl transition-shadow duration-200'
 >
   <div class='w-1/3 border-r border-dashed border-orange-dark'>
     <Image
-      class='object-contain h-full w-full rounded-t-xl p-4'
+      class='object-contain h-full w-full rounded-l-xl p-4 bg-gray-dark'
       src={image}
       alt={title}
     />
@@ -21,7 +21,7 @@ const { title, image, link, description } = Astro.props;
       class='font-bold text-xl mb-2 text-orange hover:underline transition duration-200 text-center'
       >{title}</a
     >
-    <p class='text-gray-700 text-base'>
+    <p class='text-gray-700 text-base overflow-y-auto'>
       {description}
     </p>
   </div>

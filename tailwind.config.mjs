@@ -9,7 +9,7 @@ export default {
       gray: {
         DEFAULT: 'hsl(218, 11%, 70%)',
         light: 'hsl(218, 11%, 85%)',
-        dark: 'hsl(218, 11%, 55%)',
+        dark: 'hsl(218, 11%, 35%)',
       },
       blue: {
         DEFAULT: 'hsl(217, 91%, 60%)',
