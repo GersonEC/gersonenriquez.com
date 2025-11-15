@@ -1,0 +1,20 @@
+---
+import MentorshipCard from '../components/MentorshipCard.astro';
+---
+
+<section class='flex flex-col gap-8 sm:gap-16'>
+  <h2 class='text-4xl font-semibold text-center'>Mentorship</h2>
+  <div class='flex justify-center'>
+    <MentorshipCard
+      title='Guidance for Junior Developers'
+      description='I offer my experience and knowledge to help junior developers navigate their career path, improve their technical skills, and build confidence in their abilities.'
+      topics={[
+        'Code review and best practices (one-time)',
+        'Building personal projects (program)',
+        'Career development path (program)',
+      ]}
+      link='https://calendly.com/gersonenriquez/conosciamoci'
+      linkText='Book a free call →'
+    />
+  </div>
+</section>
