@@ -78,7 +78,7 @@ export default function PaymentsCourseLP() {
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
+    <div className='min-h-screen w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
       {/* Hero Section */}
       <div className='relative overflow-hidden'>
         {/* Animated background elements */}
@@ -127,15 +127,15 @@ export default function PaymentsCourseLP() {
               />
               <button
                 type='submit'
-                className='absolute right-2 top-2 px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 flex items-center gap-2'
+                className='absolute right-2 top-3 sm:top-2 px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 flex items-center gap-2'
               >
                 {submitted ? (
                   'Subscribed! ✓'
                 ) : (
-                  <>
-                    Get Early Access
+                  <div>
+                    <span className='hidden sm:inline'>Get Early Access</span>
                     <ArrowRight className='w-4 h-4' />
-                  </>
+                  </div>
                 )}
               </button>
             </form>
@@ -155,7 +155,7 @@ export default function PaymentsCourseLP() {
       </div>
 
       {/* What You'll Learn Section */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+      <div className='w-full sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
             Build Real Payment Systems
@@ -206,7 +206,7 @@ export default function PaymentsCourseLP() {
       </div>
 
       {/* CTA Section */}
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+      <div className='w-full sm:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
         <div className='bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12 text-center'>
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
             Ready to Learn Payments?
@@ -216,7 +216,7 @@ export default function PaymentsCourseLP() {
             subscribers get special pricing.
           </p>
           <form onSubmit={handleSubmit} className='max-w-md mx-auto'>
-            <div className='flex gap-3'>
+            <div className='flex flex-col sm:flex-row gap-3'>
               <input
                 type='email'
                 value={email}
