@@ -6,7 +6,7 @@ import {
   Zap,
   CheckCircle,
   ArrowRight,
-  Sparkles,
+  Code2,
 } from 'lucide-react';
 
 export default function PaymentsCourseLP() {
@@ -52,42 +52,29 @@ export default function PaymentsCourseLP() {
     },
     {
       number: '02',
-      title: 'One-Time Payments',
-      description: 'Build your first checkout flow from scratch',
+      title: 'Build your first web-based payment app',
+      description: 'build a simple checkout flow from scratch',
       icon: <CreditCard className='w-6 h-6' />,
     },
     {
       number: '03',
-      title: 'Payment Methods in Practice',
-      description: 'Cards, wallets, and bank transfers',
+      title: 'Stripe integration',
+      description: 'one-time payments and subscriptions',
       icon: <Globe className='w-6 h-6' />,
     },
     {
       number: '04',
-      title: 'Subscriptions & Recurring Billing',
-      description: 'Build a complete SaaS billing system',
+      title: 'Paddle integration',
+      description: 'understand the power of a merchant of record',
       icon: <Code className='w-6 h-6' />,
-    },
-    {
-      number: '05',
-      title: 'Production Readiness',
-      description: 'Refunds, disputes, and error handling',
-      icon: <CheckCircle className='w-6 h-6' />,
-    },
-    {
-      number: '06',
-      title: 'Going Global',
-      description: 'Multi-currency, taxes, and compliance',
-      icon: <Globe className='w-6 h-6' />,
     },
   ];
 
   const benefits = [
-    'Real-world projects with Stripe and Paddle',
-    'Learn by building, not just watching',
+    'Build real-world projects with Stripe and Paddle',
+    'Learn by building, not just watching videos',
     'Understand the business side of payments',
-    'Production-ready code you can use immediately',
-    'From basics to going global',
+    'From basics to intermediate / advanced level',
   ];
 
   return (
@@ -105,7 +92,7 @@ export default function PaymentsCourseLP() {
           {/* Badge */}
           <div className='flex justify-center mb-8'>
             <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 backdrop-blur-sm'>
-              <Sparkles className='w-4 h-4 text-purple-300' />
+              <Code2 className='w-4 h-4 text-purple-300' />
               <span className='text-purple-200 text-sm font-medium'>
                 Hands-on Payment Integration Course
               </span>
@@ -121,9 +108,9 @@ export default function PaymentsCourseLP() {
                 By Building
               </span>
             </h1>
-            <p className='text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+            <p className='text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed text-balance'>
               Learn how payments really work and integrate Stripe & Paddle into
-              your projects. From your first checkout to going global.
+              your projects.
             </p>
           </div>
 
@@ -161,7 +148,7 @@ export default function PaymentsCourseLP() {
           </div>
 
           {/* Social Proof */}
-          <div className='text-center text-gray-400 text-sm'>
+          <div className='text-center text-gray-200 text-md font-medium'>
             <p>Perfect for mid-junior developers building real products</p>
           </div>
         </div>
@@ -174,12 +161,11 @@ export default function PaymentsCourseLP() {
             Build Real Payment Systems
           </h2>
           <p className='text-gray-300 text-lg max-w-2xl mx-auto'>
-            Stop just calling APIs. Understand what's really happening and build
-            production-ready payment integrations.
+            This is how I think the course will be structured, it could change.
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
+        <div className='grid md:grid-cols-2 gap-6 mb-16'>
           {modules.map((module, index) => (
             <div
               key={index}
@@ -223,7 +209,7 @@ export default function PaymentsCourseLP() {
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
         <div className='bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12 text-center'>
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-            Ready to Master Payments?
+            Ready to Learn Payments?
           </h2>
           <p className='text-purple-100 text-lg mb-8 max-w-2xl mx-auto'>
             Join the waitlist to get notified when the course launches. Early
